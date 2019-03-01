@@ -1,11 +1,11 @@
 import pyowm  #must be installed before by using $ pip install pyowm
 
-owm = pyowm.OWM('API key')  # To have a key you need to be registered here https://openweathermap.org
+owm = pyowm.OWM('API')  # To have a key you need to be registered here https://openweathermap.org
 
 # Current weather in Montreal
 print('Current weather in Montreal, CA')
-observation = owm.weather_at_place('Montreal,CA')
-weather = observation.get_weather()
+city = owm.weather_at_place('Montreal,CA')
+weather = city.get_weather()
 print(weather)                      
                               
 
